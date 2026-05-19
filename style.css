@@ -1,6 +1,3 @@
-/* =========================================================
-   1. GLOBAL STYLES & RESET
-   ========================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +12,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================================================
-   2. HEADER & HERO AREA STYLES
-   ========================================================= */
 header {
     width: 100%;
     min-height: 100vh;
@@ -91,9 +85,6 @@ nav ul li a:hover {
     margin-bottom: 35px;
 }
 
-/* =========================================================
-   3. REUSABLE COMPONENTS (BUTTONS & SECTIONS)
-   ========================================================= */
 .buttons {
     display: flex;
     justify-content: center;
@@ -143,9 +134,6 @@ section {
     color: #cbd5e1;
 }
 
-/* =========================================================
-   4. SERVICES GRID STYLES
-   ========================================================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -180,9 +168,6 @@ section {
     margin-bottom: 12px;
 }
 
-/* =========================================================
-   5. ABOUT & STATS STYLES
-   ========================================================= */
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -238,9 +223,6 @@ section {
     margin-bottom: 10px;
 }
 
-/* =========================================================
-   6. CALL TO ACTION (CTA) STYLES
-   ========================================================= */
 .cta {
     background: linear-gradient(135deg, #0284c7, #2563eb);
     padding: 70px 30px;
@@ -253,9 +235,6 @@ section {
     margin-bottom: 20px;
 }
 
-/* =========================================================
-   7. PRICE CALCULATOR STYLES
-   ========================================================= */
 .calc-container {
     background: #111c2d;
     padding: 40px;
@@ -303,9 +282,6 @@ select {
     color: #38bdf8;
 }
 
-/* =========================================================
-   8. FAQ STYLES
-   ========================================================= */
 .faq-container {
     max-width: 950px;
     margin: auto;
@@ -331,9 +307,6 @@ select {
     color: #dbeafe;
 }
 
-/* =========================================================
-   9. CONTACT & FOOTER STYLES
-   ========================================================= */
 .contact-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -382,9 +355,6 @@ footer {
     color: #94a3b8;
 }
 
-/* =========================================================
-   10. FLOATING WHATSAPP BUTTON STYLE
-   ========================================================= */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -416,9 +386,6 @@ footer {
     fill: white;
 }
 
-/* =========================================================
-   11. RESPONSIVE MEDIA QUERIES
-   ========================================================= */
 @media(max-width:768px) {
     .hero-content h1 {
         font-size: 2.8rem;
