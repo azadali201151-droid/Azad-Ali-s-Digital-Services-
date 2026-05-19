@@ -1,6 +1,6 @@
-/* =========================================================
-   1. GLOBAL STYLES & RESET
-   ========================================================= */
+/;
+       /* style.css */
+
 *{
     margin:0;
     padding:0;
@@ -15,14 +15,12 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================================================
-   2. HEADER & HERO AREA STYLES
-   ========================================================= */
 header{
     width:100%;
     min-height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.78)),
-    url('https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1920&auto=format&fit=crop');
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.7)),
+    url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Mohenjo-daro.jpg');
     background-size:cover;
     background-position:center;
 }
@@ -35,6 +33,7 @@ nav{
     align-items:center;
     position:fixed;
     top:0;
+    left:0;
     z-index:1000;
     background:rgba(5,10,20,0.92);
     backdrop-filter:blur(10px);
@@ -91,9 +90,6 @@ nav ul li a:hover{
     margin-bottom:35px;
 }
 
-/* =========================================================
-   3. REUSABLE COMPONENTS (BUTTONS & SECTIONS)
-   ========================================================= */
 .buttons{
     display:flex;
     justify-content:center;
@@ -109,6 +105,7 @@ nav ul li a:hover{
     transition:0.4s;
     border:none;
     cursor:pointer;
+    display:inline-block;
 }
 
 .primary{
@@ -143,9 +140,6 @@ section{
     color:#cbd5e1;
 }
 
-/* =========================================================
-   4. SERVICES GRID STYLES
-   ========================================================= */
 .services-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -169,6 +163,7 @@ section{
     width:100%;
     height:200px;
     object-fit:cover;
+    display:block;
 }
 
 .service-content{
@@ -180,9 +175,6 @@ section{
     margin-bottom:12px;
 }
 
-/* =========================================================
-   5. ABOUT & STATS STYLES
-   ========================================================= */
 .stats{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -212,6 +204,7 @@ section{
 .about img{
     width:100%;
     border-radius:25px;
+    display:block;
 }
 
 .about h2{
@@ -238,9 +231,6 @@ section{
     margin-bottom:10px;
 }
 
-/* =========================================================
-   6. CALL TO ACTION (CTA) STYLES
-   ========================================================= */
 .cta{
     background:linear-gradient(135deg,#0284c7,#2563eb);
     padding:70px 30px;
@@ -253,59 +243,6 @@ section{
     margin-bottom:20px;
 }
 
-/* =========================================================
-   7. PRICE CALCULATOR STYLES
-   ========================================================= */
-.calc-container {
-    background:#111c2d;
-    padding:40px;
-    border-radius:25px;
-    max-width:700px;
-    margin:0 auto;
-    border:1px solid rgba(255,255,255,0.08);
-}
-
-.calc-row {
-    margin-bottom:20px;
-}
-
-.calc-row label {
-    display:block;
-    margin-bottom:8px;
-    font-weight:500;
-    color:#38bdf8;
-}
-
-select {
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:12px;
-    background:#1d2d44;
-    color:white;
-    outline:none;
-    cursor:pointer;
-}
-
-.calc-result {
-    text-align:center;
-    margin-top:30px;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,0.1);
-}
-
-.calc-result h3 {
-    font-size:1.8rem;
-    margin-bottom:15px;
-}
-
-.calc-result span {
-    color:#38bdf8;
-}
-
-/* =========================================================
-   8. FAQ STYLES
-   ========================================================= */
 .faq-container{
     max-width:950px;
     margin:auto;
@@ -331,9 +268,6 @@ select {
     color:#dbeafe;
 }
 
-/* =========================================================
-   9. CONTACT & FOOTER STYLES
-   ========================================================= */
 .contact-wrapper{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -360,7 +294,9 @@ form{
     gap:18px;
 }
 
-input,textarea{
+input,
+textarea,
+select{
     width:100%;
     padding:16px;
     border:none;
@@ -368,11 +304,70 @@ input,textarea{
     background:#1d2d44;
     color:white;
     outline:none;
+    font-size:1rem;
 }
 
 textarea{
     resize:none;
     height:140px;
+}
+
+.calc-container{
+    max-width:900px;
+    margin:auto;
+    background:#111c2d;
+    padding:40px;
+    border-radius:25px;
+}
+
+.calc-row{
+    margin-bottom:25px;
+}
+
+.calc-row label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#38bdf8;
+}
+
+.calc-result{
+    margin-top:35px;
+    text-align:center;
+}
+
+.calc-result h3{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+#total-price-display{
+    color:#38bdf8;
+}
+
+.whatsapp-float{
+    position:fixed;
+    width:65px;
+    height:65px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+.whatsapp-float svg{
+    width:34px;
+    fill:white;
 }
 
 footer{
@@ -382,52 +377,20 @@ footer{
     color:#94a3b8;
 }
 
-/* =========================================================
-   10. FLOATING WHATSAPP BUTTON STYLE
-   ========================================================= */
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
-    z-index: 2000;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1) translateY(-3px);
-    box-shadow: 0px 6px 20px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-float svg {
-    width: 34px;
-    height: 34px;
-    fill: white;
-}
-
-/* =========================================================
-   11. RESPONSIVE MEDIA QUERIES
-   ========================================================= */
 @media(max-width:768px){
-
-    .hero-content h1{
-        font-size:2.8rem;
-    }
 
     nav{
         flex-direction:column;
         gap:15px;
+        padding:15px;
+    }
+
+    nav ul{
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:2.8rem;
     }
 
     .buttons{
@@ -442,22 +405,7 @@ footer{
         font-size:2rem;
     }
 
-    .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
+    .calc-result h3{
+        font-size:1.5rem;
     }
-
-    .whatsapp-float svg {
-        width: 28px;
-        height: 28px;
-    }
-  
-
-
-
-
-
-
-
+   } 
